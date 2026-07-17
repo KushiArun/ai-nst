@@ -1,1 +1,1 @@
-web: cd NST_Code && gunicorn --bind :$PORT app:app
+web: gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 --chdir NST_Code app:app
