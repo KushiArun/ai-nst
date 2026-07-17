@@ -40,8 +40,8 @@ print(f"Using device: {device}")
 encoder = VGGEncoder('vgg_normalised.pth').to(device)
 decoder = Decoder().to(device)
 
-# Use relative paths for Railway deployment
-MODEL_PATH = 'experiment/final_exp/decoder_final.pth'
+# CHANGE: Windows path to your trained decoder
+MODEL_PATH = r'D:\neural style transfer project\ai-nst-project-main\NST_Code\experiment\final_exp\decoder_final.pth'
 
 decoder.load_state_dict(
     torch.load(MODEL_PATH, map_location=device)
